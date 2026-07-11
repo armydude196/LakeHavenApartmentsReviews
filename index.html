@@ -3,254 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakehaven Apartments Reviews - Carol Stream, IL</title>
+    <title>Lakehaven Apartments Reviews - Carol Stream, IL | Tenant Portal</title>
     <meta name="description" content="Independent tenant review platform and maintenance log archive for Lakehaven Apartments at 732 Bluff St, Carol Stream, IL 60188, managed by Golub.">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #fff;
-            background-color: #11141a; /* Dark, dramatic theme */
+            color: #333;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
         }
-        
-        /* Banner for the progress update notice */
-        .notice-banner {
-            background-color: #1a2236;
-            border-bottom: 1px solid #2a3a5c;
-            color: #9fa6b2;
-            padding: 12px 20px;
-            text-align: center;
-            font-size: 14px;
-            font-style: italic;
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
         }
-        
-        /* Dramatic Hero Section */
-        .hero {
-            position: relative;
-            padding: 60px 20px 40px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, rgba(17,20,26,0.85) 0%, rgba(17,20,26,1) 100%), 
-                        url('featured-leak-bg.jpg') center/cover no-repeat;
-            border-bottom: 1px solid #2a2e3d;
-        }
-        
-        .hero-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background-color: #ffb703;
-            color: #000;
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-        }
-
         h1 {
-            font-size: 32px;
-            font-weight: 800;
-            color: #fff;
-            margin: 0 0 10px 0;
-            line-height: 1.2;
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-top: 0;
+            margin-bottom: 16px;
         }
-
         .address-sub {
             font-size: 14px;
             color: #6c757d;
-            margin-bottom: 25px;
+            margin-top: -10px;
+            margin-bottom: 20px;
             font-weight: 500;
-            letter-spacing: 0.5px;
         }
-
-        .hero p {
-            font-size: 18px;
-            color: #9fa6b2;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        /* Photo Banner Matrix (6 Top Images) */
-        .photo-matrix {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 4px;
-            max-width: 1000px;
-            margin: -20px auto 40px auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .matrix-img {
-            background: #222;
-            height: 120px;
+        .status-badge {
+            display: inline-block;
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 6px 12px;
             border-radius: 4px;
-            border: 1px solid #2a2e3d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: #666;
-            overflow: hidden;
-        }
-
-        .matrix-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Main Content & Expandable Navigation Grid */
-        .content-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px 60px 20px;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .menu-card {
-            background: #1a1e29;
-            border: 1px solid #2a2e3d;
-            border-radius: 8px;
-            padding: 25px;
-            text-decoration: none;
-            color: #fff;
-            transition: all 0.2s ease-in-out;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-4px);
-            border-color: #ffb703;
-            background: #222836;
-        }
-
-        .menu-card h3 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #fff;
-        }
-
-        .menu-card:hover h3 {
-            color: #ffb703;
-        }
-
-        .menu-card p {
-            margin: 0;
             font-size: 14px;
-            color: #9fa6b2;
-            flex-grow: 1;
-        }
-
-        .menu-card .arrow {
-            margin-top: 15px;
-            font-size: 12px;
-            color: #ffb703;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            border: 1px solid #ffeeba;
         }
-
+        p {
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 24px;
+        }
         hr {
             border: 0;
-            border-top: 1px solid #2a2e3d;
-            margin: 40px 0 24px 0;
+            border-top: 1px solid #dee2e6;
+            margin: 24px 0;
         }
-
         .disclaimer {
             font-size: 13px;
             color: #6c757d;
             font-style: italic;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px 40px 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP NOTICE BANNER -->
-    <div class="notice-banner">
-        This website is an ongoing passion project funded by no one. As a result, it may take a while to fully complete. Feel free to check back for updates!
-    </div>
-
-    <!-- DRAMATIC HERO HOOK -->
-    <div class="hero">
-        <div class="hero-container">
-            <div class="status-badge">INDEPENDENT CONSUMER ADVOCACY ARCHIVE</div>
-            <h1>Welcome to Lakehavenapartmentreviews.com</h1>
-            <div class="address-sub">732 Bluff St, Carol Stream, IL 60188 | Golub Management Audit</div>
-            <p>A comprehensive, unbiased, and factual review of Lakehaven Apartments in Carol Stream, IL.</p>
-        </div>
-    </div>
-
-    <!-- THE 6 TOP EVIDENCE IMAGES -->
-    <div class="photo-matrix">
-        <div class="matrix-img"><img src="ac_coils.jpg" alt="Caked AC Coils"></div>
-        <div class="matrix-img"><img src="wall_gap.jpg" alt="Unsealed exterior penetration"></div>
-        <div class="matrix-img"><img src="bathroom_fan.jpg" alt="Clogged bathroom fan"></div>
-        <div class="matrix-img">[ Photo 4 ]</div>
-        <div class="matrix-img">[ Photo 5 ]</div>
-        <div class="matrix-img">[ Photo 6 ]</div>
-    </div>
-
-    <!-- EXPANDABLE SUBMENU SECTION -->
-    <div class="content-section">
-        <div class="menu-grid">
-            
-            <!-- Link 1: General Overview -->
-            <a href="overview.html" class="menu-card">
-                <h3>1. General Overview</h3>
-                <p>Objective baseline parameters regarding leasing, community upkeep, and initial unit turnover standards.</p>
-                <div class="arrow">View Logs &rarr;</div>
-            </a>
-
-            <!-- Link 2: The Attic From Hell -->
-            <a href="attic-leak-saga.html" class="menu-card" style="border-color: #721c24;">
-                <h3 style="color: #f5c6cb;">2. The Attic From Hell</h3>
-                <p>The definitive chronological log of the active ceiling leak, structural patch failures, and municipal enforcement escalation.</p>
-                <div class="arrow" style="color: #f5c6cb;">Read the Saga &rarr;</div>
-            </a>
-
-            <!-- Link 3: Public Resources -->
-            <a href="resources.html" class="menu-card">
-                <h3>3. Public Resources</h3>
-                <p>A comprehensive tenant resource directory including local code enforcement channels, legal aid, and documentation guides.</p>
-                <div class="arrow">Access Guides &rarr;</div>
-            </a>
-
-            <!-- Link 4: Personal Opinions -->
-            <a href="opinions.html" class="menu-card">
-                <h3>4. Personal Opinions</h3>
-                <p>Protected commentary, corporate structural analysis, and professional evaluations regarding organizational stewardship.</p>
-                <div class="arrow">Read Commentary &rarr;</div>
-            </a>
-
-        </div>
-    </div>
-
-    <!-- LEGAL PROTECTION FOOTER -->
+<div class="container">
+    <div class="status-badge">SITE UNDER CONSTRUCTION</div>
+    <h1>Lakehaven Apartments Reviews & Reality Check</h1>
+    <div class="address-sub">Location: 732 Bluff St, Carol Stream, IL 60188 | Golub Management</div>
+    
+    <p>This independent platform is currently under development. Once live, it will serve as an unedited consumer advocacy archive documenting real resident experiences, photographic timelines of maintenance requests, and community observations for the property located in Carol Stream, Illinois.</p>
+    
+    <p>Please check back soon for updates, objective photographic logs, and public tenant resource guides.</p>
+    
+    <hr>
+    
     <div class="disclaimer">
-        <hr>
         <strong>Legal Disclaimer:</strong> This website is an independent, non-commercial consumer advocacy and review platform. It is entirely user-supported and is not affiliated with, authorized, endorsed by, or in any way officially connected to the property management of Lakehaven Apartments, Golub Realty Services LLC, or any of their subsidiaries or affiliates. All content published here represents protected opinion and verifiable statements of fact under the First Amendment.
         <br><br>
         <em>For legitimate inquiries, documentation submissions, or official correspondence, contact: LakeHavenApartmentsReviews@proton.me</em>
     </div>
+</div>
 
 </body>
 </html>
